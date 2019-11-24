@@ -9,16 +9,11 @@
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/js/typed.min.js"></script>
-		<script type="text/javascript" src="assets/js/instafeed.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	</head>
 	<body>
 
 		<div class="home hero section-wrapper" style="background: url(images/Candolim-Beach.jpg) no-repeat; background-size: cover; background-position: center center;">
-	    <video id="hero-video" no-controls="" autoplay="" loop="" muted="">
-	        <source src="assets/videos/Candolim-Beach.mp4" type="video/mp4">
-	        <source src="assets/videos/Candolim-Beach.webm" type="video/webm">
-	    </video>
 	    <div class="overlay">
 	        <div class="page-center ta-center">
 
@@ -30,7 +25,7 @@
 
 							<ul>
 								<li><a href="https://www.instagram.com/kevin_m_lee"><i class="fa fa-instagram fa-2x"></i></a></li>
-								<li><a href="https://github.com/keverino"><i class="fa fa-github fa-2x"></i></a></li>
+								<li><a href="https://github.com/kevinmlee"><i class="fa fa-github fa-2x"></i></a></li>
 								<li><a href="https://www.linkedin.com/in/kevinmichaellee"><i class="fa fa-linkedin fa-2x"></i></a></li>
 								<li><a href="/resume/"><i class="fa fa-file-text-o fa-2x"></i></a></li>
 							</ul>
@@ -40,81 +35,21 @@
 	    </div>
 	</div>
 
-	<div class="section">
-		<div class="page-center">
-
-			<h2 class="c-black ta-center">Stay Connected</h2>
-
-			<div id="instafeed"></div>
-
-		</div>
-	</div>
-
-
-
-
 		<!-- Scripts -->
 		<script>document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });</script>
 		<script>
 			$(document).ready(function(){
 
 				// Typed
-			  var lineOne = new Typed('.typed-text .line-one', {
-			    strings: ["Kevin M Lee", "I develop things"],
-			    typeSpeed: 40,
-			    backSpeed: 50,
+				var lineOne = new Typed('.typed-text .line-one', {
+				strings: ["Kevin M Lee", "I develop things"],
+				typeSpeed: 40,
+				backSpeed: 50,
 					backDelay: 1000,
-			    smartBackspace: true, // this is a default
-			    loop: false,
+				smartBackspace: true, // this is a default
+				loop: false,
 					startDelay: 1000
-			  });
-
-
-				// instagram feed
-				var userFeed = new Instafeed({
-					get: 'user',
-					userId: '49686503',
-					clientId: '8a574e3ef31f497f98df607000c5a058',
-					accessToken: '49686503.1677ed0.8fb35ae909954b218e1b6745fd8dc55b',
-					resolution: 'standard_resolution',
-					template: '<div class="ig-item"><div class="inner"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}"/></a><h5 class="c-white">{{caption}}</h3></div></div>',
-					//sortBy: 'most-recent',
-					target: 'instafeed'
-					//limit: 4,
-					//links: false
 				});
-				userFeed.run();
-
-				setTimeout(function() {
-					$('#instafeed').slick({
-						infinite: true,
-						centerMode: true,
-						centerPadding: '60px',
-						slidesToShow: 5,
-						variableWidth: true,
-						responsive: [
-							{
-								breakpoint: 768,
-								settings: {
-									centerMode: true,
-									centerPadding: '40px',
-									slidesToShow: 3
-								}
-							},
-							{
-								breakpoint: 480,
-								settings: {
-									centerMode: false,
-									variableWidth: false,
-									adaptiveHeight: true,
-									slidesToShow: 1
-								}
-							}
-						]
-					});
-				}, 1000);
-
-
 
 			});
 
