@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i');
+
+@font-face {
+    font-family: 'modern_pictograms_proregular';
+    src: url('../fonts/modernpictogramspro_2-webfont.eot');
+    src: url('../fonts/modernpictogramspro_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/modernpictogramspro_2-webfont.woff') format('woff'),
+         url('../fonts/modernpictogramspro_2-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset */
+html, body, p, h1 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	width: 100%;
+	height: 100%;
+}
+
+/* Box Model */
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.center {
+    left: 0;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 43%;
+    width: 100%;
+}
+.overlay {
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.background-image {
+	position: fixed;
+	left: 0;
+	right: 0;
+
+	display: block;
+ 	background-image: url("../../images/bg-4.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+}
+
+.bottom {
+	font-size: 20px;
+}
+
+/* ========================================================== */
+/* ======================== Base Styles ===================== */
+/* ========================================================== */
+body {
+	color: #414f57;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 2;
+}
+
+h1, h2, h3, h4, h5, h6, h7 { margin: 0; }
+
+h1, .home.hero h2 {
+	line-height: 1.5em;
+	font-size: 6vw;
+	font-family: 'Merriweather', sans-serif;
+}
+h2 {
+	font-size: 4vw;
+	font-family: 'Merriweather', sans-serif;
+}
+h3 {
+	font-size: 28px;
+	font-family: 'Merriweather', sans-serif;
+}
+h4 {
+	font-size: 20px;
+	font-family: 'Merriweather', sans-serif;
+}
+h5 {
+	font-size: 16px;
+	line-height: 1.5em;
+	font-size: 14px;
+}
+
+p {
+	color: black;
+	font-size: 1.25em;
+	margin: 0 0 1.5em 0;
+	letter-spacing: 5px;
+}
+
+.pattern-asfalt-light { background-image: url('../../images/asfalt-light.png'); }
+.pattern-asfalt-dark { background-image: url('../../images/asfalt-dark.png'); }
+.bg-ashblack { background-color: #1c1e26; }
+.bg-aquamarine { background-color: #6ccbb4; }
+.bg-aquamarine-2 { background-color: #61b6a2; }
+.bg-aquamarine-3 { background-color: #56a290; }
+.bg-aquamarine-4 { background-color: #4b8e7d; }
+.c-white { color: #ffffff; }
+.c-white-opaque { color: rgba(255, 255, 255, 0.25); }
+.c-black { color: #000000; }
+.ta-center { text-align: center; }
+
+img {
+    max-width: 100%;
+		height: auto;
+}
+
+@media screen and (max-width: 768px) {
+	h1, .home.hero h2 { font-size: 13vw; }
+	h2 { font-size: 4vw; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 16px; }
+	.fa-2x { font-size: 7vw !important; }
+  body { font-size: 16px; }
+}
+@media screen and (max-width: 500px) {
+	h1 { font-size: 14vw; }
+	h2 { font-size: 8vw; }
+}
+
+hr {
+	border: 0;
+	border-bottom: 2px solid #c6c6c6;
+	margin: 2em 0;
+}
+
+.section-wrapper {
+	height: 100vh;
+	width: 100%;
+}
+
+.section {
+	padding: 100px 0;
+}
+
+.page-center {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.table { display: table; width: 100%; margin: 0; table-layout: fixed; }
+.table-cell { display: table-cell; }
+.va-top { vertical-align: top; }
+.va-middle { vertical-align: middle; }
+
+/* ======================== Lists ====================== */
+.hero ul li {
+	display: inline;
+	color: black;
+}
+
+ul {
+   margin: 0;
+}
+
+ul li a {
+	display: inline;
+	color: white;
+	padding: 20px;
+}
+
+ul li a:hover{
+	color: #336699;
+}
+
+.fa-2x {
+	font-size: 35px;
+}
+
+a { transition: ease-in-out all 0.2s }
+
+/* ========================================================== */
+/* ======================== Typed Text ====================== */
+/* ========================================================== */
+.typed-text * { display: inline; }
+.typed-cursor {
+	color: #ffffff; font-size: 6vw;
+	animation: caret 1s steps(1) infinite;
+	position: relative;
+	top: -10px;
+}
+@keyframes caret {
+	50% {
+		color: transparent;
+	}
+}
+
+
+.hero {
+		background-size: cover !important;
+		background-position: center center !important;
+		overflow: hidden;
+		position: relative;
+}
+.hero .overlay {
+		background: rgba(0,0,0,0.40);
+		padding: 195px 0;
+		position: relative;
+		z-index: 2;
+}
+.hero video#hero-video {
+		position: absolute;
+		top: 0;
+		width: auto;
+		z-index: 0;
+		left: 0;
+		right: 0;
+		min-height: 100%;
+		min-width: 100%;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1024px){
+	.hero video#hero-video {
+			/*display: none;*/
+	}
+}
+
+/* ========================================================== */
+/* ===================== Slick JS Slider ==================== */
+/* ========================================================== */
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-family: 'modern_pictograms_proregular';
+    background-color: #017293;
+    color: #fff;
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 300;
+    border: none;
+    padding: 0;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    z-index: 99;
+    background-color: #1c1e26;
+}
+button.slick-prev.slick-arrow { position: absolute; z-index: 1; top: 50%; left: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); cursor: pointer; font-size: 0; border: none; }
+button.slick-prev.slick-arrow:before { content: '\f104'; font: normal normal normal 14px/1 FontAwesome; color: #ffffff;
+    content: '‘'; font-family: 'modern_pictograms_proregular'; font-size: 64px; }
+button.slick-next.slick-arrow { position: absolute; z-index: 1; top: 50%; right: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); cursor: pointer; font-size: 0; border: none; }
+button.slick-next.slick-arrow:before { content: '\f105'; font: normal normal normal 14px/1 FontAwesome; color: #ffffff;
+    content: '—'; font-family: 'modern_pictograms_proregular'; font-size: 64px; }
+
+@media screen and (max-width: 480px){
+	.slick-arrow {
+	    font-size: 60px;
+	    height: 40px;
+	    width: 40px;
+	}
+	button.slick-next.slick-arrow:before,
+	button.slick-prev.slick-arrow:before {
+		font-size: 40px;
+	}
+}
+
+/* ========================================================== */
+/* ===================== Instagram Feed ===================== */
+/* ========================================================== */
+#instafeed { padding: 30px 45px 0; }
+.slick-slide.slick-current.slick-active.slick-center .ig-item { opacity: 1; }
+.ig-item { padding: 0 20px; opacity: 0.4; transition: ease-in-out all 0.3s }
+.ig-item .inner { position: relative;  -webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40); -moz-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40); box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40);}
+.ig-item img { max-height: 375px; }
+.ig-item h5 { position: absolute; bottom: 0; background-color: rgba(0,0,0,0.5); padding: 5px; width: 100%; text-align: center; }
+
+@media screen and (max-width: 480px){
+	#instafeed { padding: 30px 10px 0; }
+	.ig-item { opacity: 1; }
+}
+
+
+
+/* ========================================================== */
+/* ========================= Resume ========================= */
+/* ========================================================== */
+.resume .card { margin: 50px 0; -webkit-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40); -moz-box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40); box-shadow: 0 2px 20px 0 rgba(0,0,0,0.40); }
+.resume .title-section { width: 275px; }
+.resume .title-section .title {
+    transform: rotate(-180deg);
+    font-size: 85px;
+    margin: 50px 0;
+    position: relative;
+    right: -108px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.resume .progress-bar { background-color: #6ccbb4; }
+.r-section .text { padding: 50px; }
+.experience-item h3 { margin-bottom: 20px; }
+.experience-item h4 { margin-bottom: 20px; }
+.experience-item { margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid rgba(0,0,0,0.2); }
+.experience-item:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+.subject { margin-bottom: 50px; }
+.subject:last-child { margin-bottom: 0; }
+
+@media screen and (max-width: 768px){
+  .resume .title-section { width: 175px; }
+  .resume .title-section .title { right: -75px; }
+}
+@media screen and (max-width: 480px){
+  .r-section {
+    display: block;
+  }
+  .resume .title-section {
+    width: 100%;
+    display: block;
+    padding: 20px;
+  }
+  .resume .title-section .title {
+    right: auto;
+    transform: none;
+    writing-mode: initial;
+    text-orientation: initial;
+    font-size: 12vw;
+    text-align: center;
+    margin: 0;
+  }
+  .r-section .text {
+    padding: 50px 20px;
+  }
+
+}
