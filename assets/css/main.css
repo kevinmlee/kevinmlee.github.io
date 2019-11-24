@@ -179,6 +179,7 @@ hr {
 	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	order: 1;
 	flex-basis: 55%;
+	padding: 50px;
 }
 
 .main-content .right-content {
