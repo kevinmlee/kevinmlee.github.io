@@ -4,16 +4,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i');
 
-@font-face {
-    font-family: 'modern_pictograms_proregular';
-    src: url('../fonts/modernpictogramspro_2-webfont.eot');
-    src: url('../fonts/modernpictogramspro_2-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/modernpictogramspro_2-webfont.woff') format('woff'),
-         url('../fonts/modernpictogramspro_2-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Reset */
 html, body, p, h1 {
 	margin: 0;
@@ -109,28 +99,30 @@ p {
 
 .pattern-asfalt-light { background-image: url('../../images/asfalt-light.png'); }
 .pattern-asfalt-dark { background-image: url('../../images/asfalt-dark.png'); }
+
 .bg-ashblack { background-color: #1c1e26; }
+.bg-darkslategray { background-color: #353943; }
 .bg-aquamarine { background-color: #6ccbb4; }
 .bg-aquamarine-2 { background-color: #61b6a2; }
 .bg-aquamarine-3 { background-color: #56a290; }
 .bg-aquamarine-4 { background-color: #4b8e7d; }
+
 .c-white { color: #ffffff; }
 .c-white-opaque { color: rgba(255, 255, 255, 0.25); }
 .c-black { color: #000000; }
-.ta-center { text-align: center; }
 
 img {
-    max-width: 100%;
-		height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 @media screen and (max-width: 768px) {
 	h1, .home.hero h2 { font-size: 13vw; }
 	h2 { font-size: 4vw; }
-  h3 { font-size: 22px; }
-  h4 { font-size: 16px; }
+	h3 { font-size: 22px; }
+	h4 { font-size: 16px; }
 	.fa-2x { font-size: 7vw !important; }
-  body { font-size: 16px; }
+	body { font-size: 16px; }
 }
 @media screen and (max-width: 500px) {
 	h1 { font-size: 14vw; }
@@ -158,10 +150,49 @@ hr {
 	padding: 0 15px;
 }
 
+.ta-center { text-align: center; }
 .table { display: table; width: 100%; margin: 0; table-layout: fixed; }
 .table-cell { display: table-cell; }
 .va-top { vertical-align: top; }
 .va-middle { vertical-align: middle; }
+
+.col-2 { width: 50%; }
+
+.flex-content {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.main-content { 
+	height: 100vh; 
+}
+
+.main-content .left-content { 
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1;         /* OLD - Firefox 19- */
+	width: 55%;               /* For old syntax, otherwise collapses. */
+	-webkit-flex: 1;          /* Chrome */
+	-ms-flex: 1;              /* IE 10 */
+	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	order: 1;
+	flex-basis: 55%;
+}
+
+.main-content .right-content {
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1;         /* OLD - Firefox 19- */
+	width: 45%;               /* For old syntax, otherwise collapses. */
+	-webkit-flex: 1;          /* Chrome */
+	-ms-flex: 1;              /* IE 10 */
+	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	order: 2;
+	flex-basis: 45%;
+	background-size: cover;
+	background-position: center center;
+}
 
 /* ======================== Lists ====================== */
 .hero ul li {
