@@ -79,10 +79,9 @@ h7 {
   margin: 0;
 }
 
-h1,
-.home.hero h2 {
+h1 {
   line-height: 1.5em;
-  font-size: 36px;
+  font-size: 38px;
   font-family: "Merriweather", sans-serif;
 }
 h2 {
@@ -152,12 +151,11 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  h1,
-  .home.hero h2 {
-    font-size: 13vw;
+  h1 {
+    font-size: 30px;
   }
   h2 {
-    font-size: 4vw;
+    font-size: 28px;
   }
   h3 {
     font-size: 22px;
@@ -165,19 +163,11 @@ img {
   h4 {
     font-size: 16px;
   }
-  .fa-2x {
-    font-size: 7vw !important;
-  }
-  body {
-    font-size: 16px;
-  }
 }
+
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 14vw;
-  }
-  h2 {
-    font-size: 8vw;
+  .main-content .left-content {
+    padding: 40px 20px;
   }
 }
 
@@ -249,6 +239,8 @@ hr {
   order: 1;
   flex-basis: 55%;
   padding: 50px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .main-content .right-content {
@@ -264,9 +256,30 @@ hr {
   background-position: center center;
 }
 
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .main-content.flex-content {
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .main-content .left-content {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 50px;
+    height: 70vh;
+    order: 2;
+  }
+  .main-content .right-content {
+    width: 100%;
+    flex-basis: 100%;
+    height: 30vh;
+    order: 1;
+  }
+}
+
 /* ======================== Socials ====================== */
 #socials {
   list-style: none;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 #socials > li {
@@ -339,7 +352,7 @@ a {
   display: block;
 }
 #info desc ul {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 #info desc li:not(:last-child) {
   margin-bottom: 10px;
@@ -389,12 +402,6 @@ a {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 1024px) {
-  .hero video#hero-video {
-    /*display: none;*/
-  }
 }
 
 /* ========================================================== */
