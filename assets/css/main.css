@@ -64,9 +64,9 @@ p {
 body {
   color: #414f57;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.4em;
 }
 
 h1,
@@ -318,6 +318,10 @@ a {
   color: rgba(255, 255, 255, 0.7);
 }
 
+#info h4 {
+  font-size: 18px;
+}
+
 #info .date {
   font-size: 16px;
   letter-spacing: 0.5px;
@@ -329,7 +333,19 @@ a {
   letter-spacing: 0.5px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
 }
+#info .group {
+  margin-bottom: 50px;
+}
+#info desc {
+  margin-top: 20px;
+  display: block;
+}
+#info desc li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 /* ========================================================== */
 /* ======================== Typed Text ====================== */
 /* ========================================================== */
